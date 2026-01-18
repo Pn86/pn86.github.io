@@ -1,10 +1,88 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  <title>Mcme</title>
+<meta charset="UTF-8">
+<title>MCME - Server Offline</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:"Segoe UI",sans-serif;}
+body{
+    height:100vh;
+    background:radial-gradient(circle at top,#ffd6d6,#ffb3b3,#ff8a8a);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    color:#5b0000;
+}
+.container{
+    text-align:center;
+    padding:50px 70px;
+    border-radius:18px;
+    background:rgba(255,255,255,0.35);
+    backdrop-filter:blur(8px);
+    box-shadow:0 0 40px rgba(255,80,80,0.5);
+    animation:float 4s ease-in-out infinite;
+}
+h1{
+    font-size:64px;
+    letter-spacing:6px;
+    text-shadow:0 0 12px rgba(255,60,60,0.9);
+    animation:glow 2s infinite alternate;
+}
+.status{
+    margin-top:18px;
+    font-size:22px;
+    letter-spacing:2px;
+    animation:blink 1.6s infinite;
+}
+.desc{
+    margin-top:25px;
+    font-size:18px;
+    line-height:1.7;
+}
+button{
+    margin-top:35px;
+    padding:14px 50px;
+    font-size:18px;
+    border:none;
+    border-radius:40px;
+    background:linear-gradient(135deg,#ff4b4b,#ff8080);
+    color:white;
+    cursor:pointer;
+    box-shadow:0 0 20px rgba(255,0,0,0.6);
+    transition:0.3s;
+}
+button:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 35px rgba(255,0,0,0.9);
+}
+@keyframes glow{
+    from{text-shadow:0 0 6px #ff3b3b;}
+    to{text-shadow:0 0 18px #ff0000;}
+}
+@keyframes blink{
+    0%,100%{opacity:1;}
+    50%{opacity:0.4;}
+}
+@keyframes float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-12px);}
+}
+</style>
 </head>
 <body>
-  <h1>这里是mcme服务器网站，服务器未完成!</h1>
+<div class="container">
+    <h1>MCME</h1>
+    <div class="status">⚠ SERVER OFFLINE ⚠</div>
+    <div class="desc">
+        MCME 服务器尚未开放<br>
+        当前仍在搭建与调试阶段<br><br>
+        如需了解进度，请加入官方QQ群<br>
+        <b>1062523499</b>
+    </div>
+    <button onclick="window.open('https://qm.qq.com/q/EfSzqljyOA')">
+        点击进入群聊
+    </button>
+</div>
 </body>
 </html>
